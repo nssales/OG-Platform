@@ -13,7 +13,9 @@ import com.opengamma.component.OpenGammaComponentServer;
 public class OpenGammaServer {
 
   public static void main(String[] args) {
-    String[] config = {"classpath:fullstack/fullstack-in-memory.properties"};
+//    String[] config = {"classpath:fullstack/fullstack-in-memory.properties"};
+    String[] config = {"classpath:fullstack/fullstack.properties"};
+
     new OpenGammaComponentServer().run(config);
 
   }

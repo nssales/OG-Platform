@@ -153,8 +153,17 @@ historicalTimeSeriesSource = ::default
 historicalTimeSeriesLoader = ::default
 marketDataSnapshotMaster = ::default
 
+<<<<<<< HEAD
+=======
 [webEndpoints]
 factory = com.opengamma.sesame.web.WebComponentFactory
 marketDataEnvironmentFactory = ::default
 viewRunner = ::default
 currencyMatrix = ${marketDataEnvironment.currencyMatrix}
+
+>>>>>>> upstream/master
+[jetty]
+factory = com.opengamma.component.factory.EmbeddedJettyComponentFactory
+resourceBase = ${jetty.resourceBase}
+port = ${jetty.port}
+securePort = ${jetty.securePort}

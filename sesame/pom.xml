@@ -61,6 +61,13 @@
                   <goal>aggregate-jar</goal>
                 </goals>
               </execution>
+              <execution>
+                <id>site-javadocs</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>aggregate</goal>
+                </goals>
+              </execution>
             </executions>
             <configuration>
               <links>

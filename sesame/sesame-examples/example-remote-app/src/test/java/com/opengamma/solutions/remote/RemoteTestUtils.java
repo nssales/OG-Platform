@@ -19,7 +19,7 @@ public final class RemoteTestUtils {
   /**
    * Default server url
    */
-  public static final String LOCALHOST = "http://localhost:8080/jax/";
+  public static final String LOCALHOST = "http://localhost:8181/jax/";
   /**
    * USD/GBP Exposure function name
    */

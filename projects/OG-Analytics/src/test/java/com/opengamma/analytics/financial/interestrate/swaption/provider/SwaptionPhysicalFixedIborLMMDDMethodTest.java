@@ -149,6 +149,7 @@ public class SwaptionPhysicalFixedIborLMMDDMethodTest {
   public void presentValue() {
     final double pvPreviousRun = 2000842.564; // Mean reversion 0.001: 4367793.468;
     final MultipleCurrencyAmount pv = METHOD_LMM.presentValue(SWAPTION_PAYER_LONG, LMM_MULTICURVES);
+    System.out.println("PV is " + pv.getAmount(Currency.EUR));
     assertEquals("Swaption physical - LMM - present value", pvPreviousRun, pv.getAmount(EUR), TOLERANCE_PV);
   }
 
@@ -253,7 +254,7 @@ public class SwaptionPhysicalFixedIborLMMDDMethodTest {
     AssertSensitivityObjects.assertEquals("SwaptionPhysicalFixedIborLMMDDMethod: presentValueCurveSensitivity ", pvpsExact, pvpsFD, TOLERANCE_PV_DELTA);
   }
 
-  @Test(enabled = false)
+  @Test(enabled = true)
   /**
    * Tests of performance. "enabled = false" for the standard testing.
    */

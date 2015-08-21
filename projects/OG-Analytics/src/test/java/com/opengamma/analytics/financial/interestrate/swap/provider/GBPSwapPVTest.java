@@ -195,6 +195,7 @@ public class GBPSwapPVTest {
   public void testSpotStarting5YSwap() {
     AnalyticsEnvironment.setInstance(AnalyticsEnvironment.getInstance().toBuilder().modelDayCount(DayCounts.ACT_365)
         .build());
+    System.out.println(AnalyticsEnvironment.getInstance().getModelDayCount());
     double coupon = 0.018;
     ZonedDateTime effDate = DateUtils.getUTCDate(2014, 10, 6);
     Period swapTenor = Period.ofYears(5); // termination date 6/10/2019
@@ -242,7 +243,7 @@ public class GBPSwapPVTest {
   /**
    * Print multicurve, for debugging
    */
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void printMulticurve() {
     System.out.println(SINGLE_CURVE);
     System.out.println(CCY);
